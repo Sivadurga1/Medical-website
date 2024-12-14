@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #c9d6ff, #e2e2e2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.input-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #28a745;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.medicine-details {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    color: #333;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.medicine-details.show {
+    opacity: 1;
+    display: block;
+}
+
+.foods-to-avoid {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    color: #333;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.foods-to-avoid.show {
+    opacity: 1;
+    display: block;
+}
+
+.foods-to-avoid h3 {
+    font-size: 1.3rem;
+    color: #4CAF50;
+}
+
+.result, .foods-to-avoid {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .input-section, .medicine-details, .foods-to-avoid {
+        width: 100%;
+    }
+
+    .input-section {
+        margin-bottom: 20px;
+    }
+}

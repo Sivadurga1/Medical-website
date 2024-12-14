@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Medical Assistant</h1>
+            <p>Enter your health issue, and we'll recommend the best medicine and foods to avoid.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <label for="problem">Enter your health issue:</label>
+                <input type="text" id="problem" placeholder="Type a health issue">
+                <button onclick="findMedicine()">Find Medicine</button>
+            </div>
+
+            <div class="medicine-details" id="medicine-details">
+                <h2>Medicine Details</h2>
+                <div id="result"></div>
+            </div>
+
+            <div class="foods-to-avoid" id="foods-to-avoid-section">
+                <h3>Foods to Avoid</h3>
+                <div id="foods-to-avoid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
